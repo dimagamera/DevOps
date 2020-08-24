@@ -17,7 +17,7 @@ pipeline  {
                 dir('.'){
                     //sh "docker build -t macnaer/chatterboxserver . "
                     sh "cd /var/lib/jenkins/workspace/DevOpsPipeLine"
-                    ython3 -m venv env
+                    python3 -m venv env
                     source env/bin/activate
                     pip install -r requirements.txt
                     sh "python3 start.py"
