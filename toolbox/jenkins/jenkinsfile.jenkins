@@ -11,13 +11,32 @@ pipeline  {
         timestamps()
     }
     stages {
- 
+        stage("Create docker image") {
+            steps {
+                echo 'starting ...'
+                //dir('.'){
+                 //   sh "docker build -t dimagamera/telegrambot . "
+                }
+            }
         }
         stage("docker login") {
             steps {
-                echo " ============== saccess =================="
-                
-
+                echo " ============== start =================="
+                //withCredentials([usernamePassword(credentialsId: 'DockerHub-Credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                //    sh '''
+                 //   docker login -u $USERNAME -p $PASSWORD
+                 //   '''
+                }
+            }
+        }
+ //       stage("docker push") {
+  //          steps {
+  //              echo " ============== pushing image =================="
+  //              sh '''
+  //              docker push dimagamera/telegrambot:latest
+                '''
+  //          }
+  //      }
  //       stage("docker stop") {
  //           steps {
  //               echo " ============== stoping all images =================="
@@ -59,5 +78,5 @@ pipeline  {
 //           }
 //        }
 
-    
+    }
 }
