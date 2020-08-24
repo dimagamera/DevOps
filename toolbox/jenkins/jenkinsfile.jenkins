@@ -16,7 +16,7 @@ pipeline  {
                 echo 'Creating docker image ...'
                 dir('.'){
                     //sh "docker build -t macnaer/chatterboxserver . "
-                    cd /var/lib/jenkins/workspace/DevOpsPipeLine
+                    sh "cd /var/lib/jenkins/workspace/DevOpsPipeLine"
                 }
             }
         }
