@@ -16,7 +16,7 @@ pipeline  {
                 echo 'Creating docker image ...'
                 dir('.'){
                     //sh "docker build -t macnaer/chatterboxserver . "
-                    sh "cd /var/lib/jenkins/workspace/DevOpsPipeLine"
+                    //sh "cd /var/lib/jenkins/workspace/DevOpsPipeLine"
                     sh "python3 -m venv env"
                     //sh "source env/bin/activate"
                     sh "pip install -r requirements.txt"
