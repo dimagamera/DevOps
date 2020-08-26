@@ -1,6 +1,6 @@
 import requests
-from boto3.session import Session
-import boto3
+from boto.session import Session
+import boto
 
 
 class privat:
