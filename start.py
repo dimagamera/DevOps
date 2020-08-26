@@ -43,7 +43,7 @@ class weather:
     def s3(self):
         bucketname = "dubnobucket"
         file_name = "weather.txt"
-        s3 = boto.client('s3')
+        s3 = boto3.client('s3')
         s3.upload_file(file_name, bucketname, file_name)
 
 
