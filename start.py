@@ -1,7 +1,6 @@
 import requests
 from boto3.session import Session
 import boto3
-from botocore.exceptions import ClientError
 
 ACCESS_KEY = 'AKIAT5NIZR6LG6DQKM3D'
 SECRET_KEY = '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'
