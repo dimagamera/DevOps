@@ -2,10 +2,6 @@ import requests
 from boto3.session import Session
 import boto3
 
-ACCESS_KEY = 'AKIAT5NIZR6LG6DQKM3D'
-SECRET_KEY = '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'
-session = Session(region_name = 'eu-north-1', aws_access_key_id=ACCESS_KEY,
-                  aws_secret_access_key=SECRET_KEY)
 
 class privat:
     def __init__(self):
@@ -44,7 +40,11 @@ class weather:
                     "\nМаксимальна температура: " + str(max_t))
         f.close
 
-    def s3(self):
+    def s3(self):   
+        ACCESS_KEY = 'AKIAT5NIZR6LG6DQKM3D'
+        SECRET_KEY = '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'
+        session = Session(region_name = 'eu-north-1', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+        myclient = session.resource('s3')
         bucketname = "dubnobucket"
         file_name = "weather.txt"
         s3 = boto3.client('s3')
