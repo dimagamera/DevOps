@@ -39,8 +39,7 @@ class weather:
                     "\nМаксимальна температура: " + str(max_t))
         f.close
 
-    def s3(self):   
-        myclient = session.resource('s3')
+    def s3(self):
         bucketname = "dubnobucket"
         file_name = "weather.txt"
         s3 = boto3.client('s3')
