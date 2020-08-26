@@ -4,7 +4,7 @@ import boto3
 
 ACCESS_KEY = 'AKIAT5NIZR6LG6DQKM3D'
 SECRET_KEY = '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'
-session = Session(aws_access_key_id=ACCESS_KEY,
+session = Session(region_name = 'eu-north-1', aws_access_key_id=ACCESS_KEY,
                   aws_secret_access_key=SECRET_KEY)
 
 class privat:
