@@ -1,7 +1,7 @@
 import requests
 from boto3.session import Session
 import boto3
-
+from botocore.config import Config
 
 class privat:
     def __init__(self):
