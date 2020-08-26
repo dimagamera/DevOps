@@ -1,5 +1,4 @@
 import requests
-from boto.session import Session
 import boto
 
 
